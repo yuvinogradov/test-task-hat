@@ -1,0 +1,9 @@
+.cards{
+    border: red solid 1px;
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+}
