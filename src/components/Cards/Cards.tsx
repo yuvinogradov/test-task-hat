@@ -16,12 +16,21 @@ export default function Cards() {
         dispatch(thunk)
     }, [])
 
-    const cards = useSelector((state: any) => state.cardsList)
+    let cards = useSelector((state: any) => state.cardsList)
+    const filter = useSelector((state: any) => state.filter)
 
 
-    //const renderCards = cards.reduce((acc:string, val:any) => {return acc +=`<Card key={${val.id}} name={${val.name}}/>`}, "")
 
-    //debugger
+    // let cards2
+
+    if(filter.filter!=='Все категории') {
+        console.log('filter: ', filter.filter)
+        cards = cards.filter((card: any) => {
+            return card.category === filter.filter
+        } )
+    }
+
+    // console.log('cards2 here:', cards2)
 
     function onCardClickHandler(id: string) {
 

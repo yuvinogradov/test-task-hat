@@ -2,12 +2,14 @@ import {applyMiddleware, combineReducers, createStore} from "redux"
 import thunkMiddleware from "redux-thunk";
 import {appReducer} from "./app-reducer";
 import {cardsListReducer} from "./cards-reducer";
+import {filterReducer} from "./filter-reducer";
 
 
 
 export const rootReducer = combineReducers({
     appState: appReducer,
     cardsList: cardsListReducer,
+    filter: filterReducer,
 })
 
 // вариант для работы с расширением (хрома) redux devtools:

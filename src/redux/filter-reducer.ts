@@ -4,7 +4,7 @@ export type InitialStateType = {
 }
 
 const initialState: InitialStateType = {
-    filter: 'All',
+    filter: 'Все категории',
 }
 // export type AppStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
 
