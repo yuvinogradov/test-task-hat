@@ -13,11 +13,7 @@ export default function Filter() {
                 return acc = [...acc, card.category]
             }
             return acc;
-        }, [])
-
-    categories.unshift('Все категории')
-
-    console.log(categories)
+        }, ['Все категории'])
 
     function onCatClickHandler(cat: string) {
         dispatch(setFilterAC(cat))
@@ -25,10 +21,8 @@ export default function Filter() {
 
     return <>
         <div className={style.filter}>
-            {/*// {renderCards}*/}
             {
                 categories.map((cat: string) => {
-                    // return <div >cat</div>
                     return <div key={cat} onClick={()=>onCatClickHandler(cat)}>{cat}</div>
                 })
             }

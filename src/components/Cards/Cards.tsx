@@ -11,7 +11,6 @@ export default function Cards() {
     const [showModal, setShowModal] = useState('')
 
     useEffect(() => {
-        //alert('Hello')
         const thunk = fetchCardsTC()
         dispatch(thunk)
     }, [])
@@ -24,16 +23,9 @@ export default function Cards() {
     // let cards2
 
     if(filter.filter!=='Все категории') {
-        console.log('filter: ', filter.filter)
         cards = cards.filter((card: any) => {
             return card.category === filter.filter
         } )
-    }
-
-    // console.log('cards2 here:', cards2)
-
-    function onCardClickHandler(id: string) {
-
     }
 
     return <>
@@ -42,7 +34,6 @@ export default function Cards() {
             {
                 cards.map((card: any) => {
                     return <div onClick={() => {
-                        // onCardClickHandler(card.id)
                         setShowModal(card.id)
                     }}><Card key={card.id} {...card} /></div>
                 })
@@ -53,12 +44,9 @@ export default function Cards() {
             enableBackground={true}
             backgroundOnClick={() => setShowModal('')}
             close={() => setShowModal('')}
-
             width={600}
             height={400}
-
             show={showModal !== ''}
-
             productId={showModal}
         >
         </Modal>

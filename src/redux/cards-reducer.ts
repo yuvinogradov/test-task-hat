@@ -8,7 +8,6 @@ const initialState: Array<any> = []
 type CardType = any;
 
 export const cardsListReducer = (state: Array<CardsDomainType> = initialState, action: any): Array<any> => {
-    // debugger
     switch (action.type) {
         case SET_CARDS_LIST:
             return action.cardsList;

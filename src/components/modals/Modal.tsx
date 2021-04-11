@@ -20,8 +20,6 @@ export type ModalPropsType = {
     productId?: string
 
     children?: ReactChild | ReactChildren | ReactElement | (string | ReactChildren | ReactElement)[];
-
-
 }
 
 

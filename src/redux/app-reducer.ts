@@ -1,4 +1,3 @@
-
 export type InitialStateType = {
     status: AppStatusType
     isInitialized: boolean

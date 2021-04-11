@@ -6,8 +6,6 @@ export type InitialStateType = {
 const initialState: InitialStateType = {
     filter: 'Все категории',
 }
-// export type AppStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
-
 
 type ActionTypes =
     | ReturnType<typeof setFilterAC>

@@ -3,7 +3,6 @@ import style from './Card.module.css'
 import emptyImage from '../../assets/empty.png'
 
 export default function Card(props: any) {
-    // debugger
     let {name, id} = props
     return <div className={style.card}>
         <div className={style.image}><img src={emptyImage} width="140px" height=""/></div>
