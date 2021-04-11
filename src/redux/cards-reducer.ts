@@ -1,27 +1,17 @@
 import {Dispatch} from 'redux'
 import {API} from "../api/API";
 import {setAppStatusAC, SetAppStatusActionType} from "./app-reducer";
+
 const SET_CARDS_LIST = 'SET_CARDS_LIST'
 
 const initialState: Array<any> = []
 type CardType = any;
-// export type TodolistType = {
-//     id: string
-//     title: string
-//     addedDate: string
-//     order: number
-// }
 
 export const cardsListReducer = (state: Array<CardsDomainType> = initialState, action: any): Array<any> => {
     // debugger
     switch (action.type) {
-
-
         case SET_CARDS_LIST:
-            //debugger
-            // return state
             return action.cardsList;
-            // return action.cardsList.map(tl => ({...tl, filter: 'all', entityStatus: 'idle'}))
         default:
             return state
     }
@@ -29,17 +19,14 @@ export const cardsListReducer = (state: Array<CardsDomainType> = initialState, a
 
 export const setCardsListAC = (cardsList: Array<CardType>) => ({type: SET_CARDS_LIST, cardsList} as const)
 
-
 export type SetCardsListActionType = {
     type: string
     cardsList: Array<any>
 };
-// export type SetCardsListActionType = ReturnType<typeof setCardsListAC>;
 
 type ActionsType =
     | SetCardsListActionType
     | SetAppStatusActionType
-
 
 
 // thunk

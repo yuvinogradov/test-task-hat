@@ -4,7 +4,6 @@ import style from "./Cards.module.css"
 import {fetchCardsTC} from "../../redux/cards-reducer";
 import {useDispatch, useSelector} from "react-redux";
 import Modal from "../modals/Modal";
-import styleModal from '../Card/Card.module.css'
 
 export default function Cards() {
 
@@ -40,10 +39,6 @@ export default function Cards() {
                 })
             }
         </div>
-        {/*{showModal === '' ? '' : <Modal show={true}>*/}
-        {/*    <>*/}
-        {/*    </>*/}
-        {/*</Modal>}*/}
 
         <Modal
             enableBackground={true}
@@ -52,21 +47,11 @@ export default function Cards() {
 
             width={600}
             height={400}
-            // modalOnClick={() => setShow(false)}
 
             show={showModal !== ''}
 
             productId={showModal}
         >
-            {/*<div className={styleModal.title} >{cards.find() }</div>*/}
-            {/*{showModal}*/}
-
-            {/*{'Simple Modal'}*/}
-            {/*<div style={{marginTop: '5px'}}>*/}
-            {/*    <button onClick={() => setShowModal(false)}>*/}
-            {/*        { 'Close'}*/}
-            {/*    </button>*/}
-            {/*</div>*/}
         </Modal>
     </>
 }
